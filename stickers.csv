@@ -1,0 +1,30 @@
+name,filename,type
+Beware of vehicles,vehicles,hazard
+Biological hazard,biological,hazard
+Compressed gases,compgas,hazard
+Corrosion risk,corrosive,hazard
+Electric shock,electric,hazard
+Fire,fire,hazard
+Hot surfaces,hotsurfaces,hazard
+Ionizing radiation,ionizing,hazard
+Laser beam hazard,laser,hazard
+Magnetic fields,magnetic,hazard
+Manual handling,manualhandling,hazard
+Moving machinery,machinery,hazard
+Non-ionizing radiation,nonionizing,hazard
+Risk of explosion,explosion,hazard
+Sharps hazard,sharps,hazard
+Slippery surface,slippery,hazard
+Toxic hazard,toxic,hazard
+Ultraviolet light,uvlight,hazard
+Eye protection,eye,protection
+Hearing protection,hearing,protection
+Foot protection,foot,protection
+Hand protection,hand,protection
+Protective clothing,ppe,protection
+Face shield,face,protection
+Hair contained,hair,protection
+Respiratory protection,respiratory,protection
+Eyewash,eyewash,equipment
+Shower,shower,equipment
+Spill kit,spill,equipment

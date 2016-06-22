@@ -1,0 +1,75 @@
+body {
+	
+	font-family:"Lucida Grande", Tahoma, Arial, Verdana, sans-serif;
+	color: #222;
+	background-color: #FFF }
+
+h1, h2, h3, h4, h5, h6 {
+font-family:"Helvetica Neue", Arial, "Lucida Grande", sans-serif;
+display:block;
+}
+
+div#wrapper {
+width: 950px;
+background-color:#FFFFFF;
+margin-top: 5px;
+margin-bottom: 50px;
+margin-left: auto;
+margin-right: auto;
+padding: 0px;
+}
+div#header {
+height: 175px;
+padding: 0px;
+margin: 0px;
+text-align: center;
+}
+div#main {
+padding: 5px;
+}
+div#footer {
+padding: 5px;
+font-size:0.7em;
+margin: 0px;
+border-top: thin solid #000000;
+text-align: center;
+}
+
+sub{
+display:block;
+font-weight:bold;
+}
+
+td{
+vertical-align:top;
+padding:15px;
+}
+
+	
+p {
+
+	}
+ 
+p.dent {
+	padding-left: 3em;
+	font-size:0.8em;
+	color: blue;
+	}
+label {
+	float:left;
+	display:block;
+	width: 90px;
+}	
+lbl2 {
+	float:left;
+	display:block;
+	width: 200px;
+}	
+p.inl{
+	display:inline;
+}		
+
+a:link {
+  color: blue }
+a:visited {
+  color: purple }
