@@ -74,7 +74,7 @@ function getStickers($type)
 <body class=" __plain_text_READY__">
 
 <div id="logo">
-<img src="images/UTS_logo.png" alt="UTS" width="152" height="50" style="border: 1px; vertical-align:top; float:left;">
+<img src="images/UTS_logo.png" alt="UTS" width="140" height="50" style="border: 1px; vertical-align:top; float:left;">
 </div>
 
 <div id="wrappertop">
