@@ -33,7 +33,7 @@ $emergencyy = 3445;
 // Text vars
 $black = imagecolorallocate($dest, 0, 0, 0);
 $red = imagecolorallocate($dest, 255, 0, 0);
-$font = 'ARIAL.TTF';
+$font = __DIR__.'/ARIAL.TTF';
 
 // Copy
 imagecopy($dest, $src, 0, 0, 0, 0, 3508, 4961);
