@@ -113,6 +113,38 @@ function addLabelText($imgSrc, $startHeight, $text, $color, $font)
 		return $temp;
 }
 
+// Place induction requirement - amended 25/9/2014 CL/S&W ;amended 10/3/14 drew
+
+$dst_x = 1534;
+$dst_y = 2200;
+
+$safetyx = 1534;
+
+// Place induction requirement - amended 25/9/2014 CL/S&W ;amended 10/3/14 drew
+switch ($_POST['induction'])
+{
+    case "soft":
+        $induct = imagecreatefrompng('./img/stickers/induct_soft.png');
+        break;
+    case "essentials":
+        $induct = imagecreatefrompng('./img/stickers/induct_essentials.png');
+        break;
+    case "hard":
+        $induct = imagecreatefrompng('./img/stickers/induct_hard.png');
+        break;
+    case "custom":
+        $induct = addLabelText(null, 50, $_POST['customInduct'], $red, $font);
+        break;
+}
+imagecopy($dest, $induct, $safetyx, 2200, 0, 0, 408, 524);
+$safetyx += 452;
+
+if (isset($_POST['custom'])){
+    $induct = addLabelText(null, 50, $_POST['customInduct'], $red, $font);
+    imagecopy($dest, $induct, $safetyx, 2200, 0, 0, 408, 524);
+    $safetyx += 452;
+}
+
 
 //Place Safety Stickers
 
@@ -125,30 +157,15 @@ if (isset($_POST['protections']))
     $safetyx += 452;
     $newline ++;
     //check if reached end slots...
-    if($newline=="3") {
+    if($newline=="2") {
       $safetyy += 533;
       $safetyx = 180;
       }
   }
 }
 
-// Place induction requirement - amended 25/9/2014 CL/S&W ;amended 10/3/14 drew
-switch ($_POST['induction'])
-{
-	case "soft":
-		$induct = imagecreatefrompng('./img/stickers/induct_soft.png');
-		break;
-	case "essentials":
-		$induct = imagecreatefrompng('./img/stickers/induct_essentials.png');
-		break;
-	case "hard":
-		$induct = imagecreatefrompng('./img/stickers/induct_hard.png');
-		break;
-	case "custom":
-		$induct = addLabelText(null, 50, $_POST['customInduct'], $red, $font);
-		break;
-}
-imagecopy($dest, $induct, 1534, 2200, 0, 0, 408, 524);
+
+//imagecopy($dest, $induct, 1534, 2200, 0, 0, 408, 524);
 
 //Place Emergency Stickers
 

@@ -130,10 +130,10 @@ function getStickers($type)
 <hr />	
 
 			<strong>Precautionary measures that may be required</strong><br />
-			<input type="checkbox" name="induction" value="hard" Checked />Safety induction required before entering<br />
-			<input type="checkbox" name="induction" value="soft" />Safety induction required before working unsupervised<br />
-			<input type="checkbox" name="induction" value="essentials" />Safety and Wellbeing Essentials training required before working.<br />
-			<input type="checkbox" name="induction" value="custom" />
+			<input type="radio" name="induction" value="hard" Checked />Safety induction required before entering<br />
+			<input type="radio" name="induction" value="soft" />Safety induction required before working unsupervised<br />
+			<input type="radio" name="induction" value="essentials" />Safety and Wellbeing Essentials training required before working.<br />
+			<input type="checkbox" name="custom" value="custom" />
 			Other Induction Message (freetext): <input type="text" name="customInduct" />
 			<?php	getStickers("protection");	?>
 
