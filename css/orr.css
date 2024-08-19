@@ -261,7 +261,7 @@ body#printpreview { width: 100%; color: #000; background-color: #fff; font-famil
 #wrappertop{background:#0099cc ;}
 
 /* wrapper */
-#wrapper { color:#ffffff; background: #fff) url(images/bottomx.png) no-repeat scroll left top; margin: 0 auto 0 auto; width: 100%; text-align: left; }
+#wrapper { color:#ffffff; background: #fff;) url(images/bottomx.png) no-repeat scroll left top; margin: 0 auto 0 auto; width: 100%; text-align: left; }
 #wrapperform {
     background: #ffffff;
     color: #ffffff;
@@ -859,7 +859,9 @@ background: transparent url(images/link_dot_active.gif) top left no-repeat;
 color: #fff;
 }
 
-
+#main-column input[type="text"]{
+    margin-bottom:5px;
+}
 
 
 

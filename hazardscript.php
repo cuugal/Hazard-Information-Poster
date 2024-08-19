@@ -207,7 +207,7 @@ switch ($filetype) {
 	case "png":
 		header('Content-Type: image/png');
 		header('Content-disposition: attachment; filename="'.$_POST['room'].'_hazardposter.png"');
-		imagepng($dest,NULL,0,NULL);
+		imagepng($dest,NULL,0,0);
 		break;
 	case "gif":
 		header('Content-Type: image/gif');
@@ -233,7 +233,7 @@ switch ($filetype) {
 		break;
 	default:
 		header('Content-Type: image/png');
-		imagepng($dest,NULL,6,NULL);
+		imagepng($dest,NULL,6,0);
 		break;
 }
 

@@ -34,7 +34,7 @@ function getStickers($type)
 	while (!feof($file_handle) ) 
 	{
 		$line_of_text = fgetcsv($file_handle, 1024);
-		if ($line_of_text[2]==$type)
+		if (isset($line_of_text[2]) && $line_of_text[2]==$type)
 		{
 			$basename = $line_of_text[1];
 			$desc = $line_of_text[0];
@@ -50,7 +50,6 @@ function getStickers($type)
 	echo '</div>';
 	echo '<br class="clearBoth" />';
 	fclose($file_handle);
-    return;
 }
 ?>
 
