@@ -33,7 +33,7 @@ function getStickers($type)
 	echo '<div class="evenly">';
 	while (!feof($file_handle) ) 
 	{
-		$line_of_text = fgetcsv($file_handle, 1024);
+		$line_of_text = fgetcsv($file_handle, 1024, ",", "\"", "\\");
 		if (isset($line_of_text[2]) && $line_of_text[2]==$type)
 		{
 			$basename = $line_of_text[1];
