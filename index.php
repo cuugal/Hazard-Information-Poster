@@ -100,16 +100,16 @@ function getStickers($type)
 		<p>
 		<label>Facility Name</label>&nbsp;<input type="text" name="facility" value="" size="40"/> eg. Signals Lab<br />
 		<label>Room Number</label>&nbsp;<input type="text" name="room" size="20" value="" /> eg. CB01.04.35<br />
-		<label>Faculty/Unit</label>&nbsp;<input type="text" name="faculty" value="" size="44" /></p>
+		<label>Faculty/Unit</label>&nbsp;<input type="text" name="faculty" value="" size="44" /></br>
 		<!-- <label>Faculty/Unit</label>&nbsp;<input type="text" name="faculty" value="" /></p> -->
 		<!-- First Aid Kit Located: <input type="text" name="aid_kit" size="5" value="" /><br /> -->
-		<p>First Aid Officer(s)<br />
-		1) <label>Name</label>&nbsp;<input type="text" name="aid1_name" value="" /> Room <input type="text" name="aid1_room" size="15" value="" /> Ext <input type="text" name="aid1_ext" size="5" value="x" /><br />
-		2) Name <input type="text" name="aid2_name" value="" /> Room <input type="text" name="aid2_room" size="15" value="" /> Ext <input type="text" name="aid2_ext" size="5" value="x" /><br />
-&nbsp;<a href="http://cfsites1.uts.edu.au/safetyandwellbeing/first-aid/list.cfm?SortBy=NAMEPATH" target="_blank">(View the listing of designated First Aid Officers)</a>
-</p>
-		<p>Facility supervisor<br />Name <input type="text" name="super_name" value="" /> Room <input type="text" name="super_room" size="15" value="" /> Ext <input type="text" name="super_ext" size="5" value="x" /></p>
-		<p>Building Services Officer<br />Name <input type="text" name="bso_name" value="" /> Ext <input type="text" name="bso_ext" size="5" value="x" /> Fax <input type="text" name="bso_fax" size="5" value="x" /><br />
+		<!--p>First Aid Officer(s)<br /-->
+		<input type="hidden" name="aid1_name" value="" />  <input type="hidden" name="aid1_room" size="15" value="" />  <input type="hidden" name="aid1_ext" size="5" value="" />
+		<input type="hidden" name="aid2_name" value="" />  <input type="hidden" name="aid2_room" size="15" value="" />  <input type="hidden" name="aid2_ext" size="5" value="" />
+&nbsp;<!--a href="http://cfsites1.uts.edu.au/safetyandwellbeing/first-aid/list.cfm?SortBy=NAMEPATH" target="_blank">(View the listing of designated First Aid Officers)</a-->
+
+		<br />Facility supervisor<br />Name <input type="text" name="super_name" value="" /> Room <input type="text" name="super_room" size="15" value="" /> Ext <input type="text" name="super_ext" size="5" value="x" /></br>
+		<input type="hidden" name="bso_name" value="" />  <input type="hidden" name="bso_ext" size="5" value="" />  <input type="hidden" name="bso_fax" size="5" value="" /><br>
 
 <hr />	
 
@@ -145,7 +145,7 @@ function getStickers($type)
 <!--		<div style="clear: both;"> -->
 		Select a file type (select 'none' for web viewing): <br />
 		<input type="radio" name="filetype" value="none" Checked />none
-		<input type="radio" name="filetype" value="png" /> .png
+		<!--input type="radio" name="filetype" value="png" /> .png -->
 		<input type="radio" name="filetype" value="gif" /> .gif
 		<input type="radio" name="filetype" value="jpeg" /> .jpeg
 		<input type="radio" name="filetype" value="pdf" /> .pdf

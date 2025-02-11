@@ -16,6 +16,13 @@ ini_set("memory_limit","256M");
 date_default_timezone_set("Australia/Sydney");
 // Create image instances
 
+// for testing
+//var_dump($_POST['customHzds']);
+//die(); // Stops further execution temporarily
+
+
+
+
 //Base Poster
 $src = imagecreatefrompng('./img/poster_base.png');
 

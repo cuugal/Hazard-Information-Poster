@@ -258,7 +258,7 @@ body#printpreview { width: 100%; color: #000; background-color: #fff; font-famil
 /* make this solid 0099cc  whit white font */
 /* top bar */
 /* #wrappertop{background:#eaede4 url(images/top.png) no-repeat scroll left top;} */
-#wrappertop{background:#0099cc ;}
+#wrappertop{background:#0f4beb ;}
 
 /* wrapper */
 #wrapper { color:#ffffff; background: #fff;) url(images/bottomx.png) no-repeat scroll left top; margin: 0 auto 0 auto; width: 100%; text-align: left; }
@@ -860,7 +860,7 @@ color: #fff;
 }
 
 #main-column input[type="text"]{
-    margin-bottom:5px;
+  margin-bottom:5px;
 }
 
 
