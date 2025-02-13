@@ -16,6 +16,13 @@ ini_set("memory_limit","256M");
 date_default_timezone_set("Australia/Sydney");
 // Create image instances
 
+// for testing
+//var_dump($_POST['customHzds']);
+//die(); // Stops further execution temporarily
+
+
+
+
 //Base Poster
 $src = imagecreatefrompng('./img/poster_base.png');
 
@@ -207,7 +214,7 @@ switch ($filetype) {
 	case "png":
 		header('Content-Type: image/png');
 		header('Content-disposition: attachment; filename="'.$_POST['room'].'_hazardposter.png"');
-		imagepng($dest,NULL,0,NULL);
+		imagepng($dest,NULL,0,0);
 		break;
 	case "gif":
 		header('Content-Type: image/gif');
@@ -233,7 +240,7 @@ switch ($filetype) {
 		break;
 	default:
 		header('Content-Type: image/png');
-		imagepng($dest,NULL,6,NULL);
+		imagepng($dest,NULL,6,0);
 		break;
 }
 
