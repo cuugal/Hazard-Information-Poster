@@ -85,39 +85,51 @@ if (isset($_POST['customHzds']))
 // Create a label with custom text
 function addLabelText($imgSrc, $startHeight, $text, $color, $font)
 {
-		$arrStr = explode(" ",$text);
-		if (empty($imgSrc))
-		{
-			$temp = imagecreatetruecolor(408, 524);
-			$white = imagecolorallocate($temp, 255, 255, 255);
-			imagefill($temp, 0, 0, $white);
-		}
-		else
-		{
-			$temp = imagecreatefrompng($imgSrc);
-		}
-		$yPos = $startHeight;
-		
-		// make string to fit label width
-		$buff = "";
-		
-		foreach ($arrStr as $str)
-		{
-			$count = strlen($buff) + strlen($str) + 1;	// plus space
-			if ($count > 16)
-			{
-				// print a full line
-				imagettftext($temp, 40, 0, 15, $yPos,  $color, $font, $buff);
-				$yPos += 45;
-				$buff = $str;
-			}
-			else
-			{
-				if (empty($buff)) { $buff = $str; } else {	$buff = $buff." ".$str;} 
-			}
-		}
-		imagettftext($temp, 40, 0, 15, $yPos,  $color, $font, $buff);
-		return $temp;
+    $arrStr = explode(" ",$text);
+    if (empty($imgSrc))
+    {
+        $temp = imagecreatetruecolor(408, 524);
+        $white = imagecolorallocate($temp, 255, 255, 255);
+        imagefill($temp, 0, 0, $white);
+    }
+    else
+    {
+        $temp = imagecreatetruecolor(408, 524);
+        $source = imagecreatefrompng($imgSrc);
+
+        // Enable alpha blending
+        imagealphablending($temp, true);
+        imagesavealpha($temp, true);
+
+        // Copy the background image
+        imagecopy($temp, $source, 0, 0, 0, 0, 408, 524);
+        imagedestroy($source);
+    }
+
+    // Enable alpha blending for text
+    imagealphablending($temp, true);
+
+    $yPos = $startHeight;
+    $buff = "";
+
+    foreach ($arrStr as $str)
+    {
+        $count = strlen($buff) + strlen($str) + 1;    // plus space
+        if ($count > 16)
+        {
+            // print a full line
+            imagettftext($temp, 40, 0, 15, $yPos, $color, $font, $buff);
+            $yPos += 45;
+            $buff = $str;
+        }
+        else
+        {
+            if (empty($buff)) { $buff = $str; } else { $buff = $buff." ".$str; }
+        }
+    }
+    imagettftext($temp, 40, 0, 15, $yPos, $color, $font, $buff);
+
+    return $temp;
 }
 
 // Place induction requirement - amended 25/9/2014 CL/S&W ;amended 10/3/14 drew
